@@ -5,7 +5,7 @@ import CardContext from '../../store/card-context';
 
 const HeaderCartButton = (props) => {
   const abc = useContext(CardContext);
-  const numberOfCardItem = abc.items.reduce((curItem, item)=>{return curItem+item},0)
+  const numberOfCardItem = abc.items.reduce((curItem, item)=>{return curItem+item.amount},0)
   return (
     <button className={classes.button} onClick={props.onClick}>
       <span className={classes.icon}>
